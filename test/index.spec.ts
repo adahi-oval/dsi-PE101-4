@@ -1,9 +1,9 @@
 import 'mocha';
 import {expect} from 'chai';
-import {checkBoard, getPositions, checkAttack} from '../src/index';
+import {checkBoard, getPositions, checkAttack, allowedChars} from '../src/index';
 
 describe('Ejercicio 1', () => {
-  const board = [
+  const board: allowedChars[][] = [
 
     ['-', '-', '-', '-', '-', '-', '-', '-'],
 
@@ -22,11 +22,12 @@ describe('Ejercicio 1', () => {
     ['-', '-', '-', '-', '-', '-', '-', '-']
 
   ];
-  const board2 = [
+
+  const board2: allowedChars[][] = [
 
     ['-', '-', '-', '-', '-', '-', '-', '-'],
 
-    ['-', '-', '-', 'A', '-', '-', '-', '-'],
+    ['-', '-', '-', '-', '-', '-', '-', '-'],
 
     ['-', '-', '-', '-', '-', '-', '-', '-'],
 
@@ -38,11 +39,11 @@ describe('Ejercicio 1', () => {
 
     ['-', '-', '-', '-', '-', '-', '-', '-'],
 
-    ['-', '-', '-', '-', '-', '-', '-', '-']
+    ['-', '-', '-', '-', '-', '-', '-']
 
   ];
 
-  const board3 = [
+  const board3: allowedChars[][] = [
 
     ['-', '-', '-', '-', '-', '-', '-', '-'],
 

@@ -1,19 +1,17 @@
-export function checkBoard(board: Array<Array<string>>): boolean {
+export type allowedChars = '-' | 'N' | 'B';
+
+export function checkBoard(board: allowedChars[][]): boolean {
 
   for (let index = 0; index < board.length; index++) {
     const element = board[index];
     if (element.length !== 8) { return false; }
     else if(board.length !== 8) { return false; }
-    for(let square of element){
-      if(square === "-" || square === 'N' || square === 'B') { continue; }
-      else { return false; }
-    }
   }
 
   return true; 
 }
 
-export function getPositions(board: string[][]): number[][]{
+export function getPositions(board: allowedChars[][]): number[][]{
   
   let positions: Array<Array<number>> = [];
 
@@ -34,7 +32,7 @@ export function getPositions(board: string[][]): number[][]{
   return positions;
 }
 
-export function checkAttack(board: Array<Array<string>>): boolean {
+export function checkAttack(board: allowedChars[][]): boolean {
 
   if (!checkBoard(board)){
     throw new Error('El formato del tablero no es válido.');
