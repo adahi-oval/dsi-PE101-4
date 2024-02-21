@@ -1,6 +1,6 @@
 import 'mocha';
 import {expect} from 'chai';
-import {checkBoard, getPositions, checkAttack, allowedChars} from '../src/index';
+import {checkBoard, getPositions, checkAttack, allowedChars} from '../src/ejercicio-1';
 
 describe('Ejercicio 1', () => {
   const board: allowedChars[][] = [
